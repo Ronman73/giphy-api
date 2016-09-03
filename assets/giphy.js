@@ -1,11 +1,15 @@
 $(document).on("ready",function(){
+	//this gives us an object with an array of 3 which gives some topics
 	var topics = [{topic:"NFL",limit:"10",rating:"all"},
 				{topic:"NBA",limit:"10",rating:"all"},
 				{topic:"Football",limit:"10",rating:"all"}];
+
+	//this creates the div that has the topic, limit, and rating 
 	topics.forEach(function(t){
 		var div = $("<div class='topics'><p><span>Limit:</span> "+t.limit+"</p><p><span>Rating:</span> "+t.rating+"</p><button class='btn' data-topic='"+t.topic+"' data-limit='"+t.limit+"' data-rating='"+t.rating+"'>"+t.topic+"</button></div>");
 		$("body #divTopic").append(div);
 	});
+
 
 	$("#add").on("click", function(ev){
 		ev.preventDefault();
@@ -42,6 +46,8 @@ $(document).on("ready",function(){
 		if( rating !== "all")
 			giphyData[parameterRating] = rating;
 
+		//this uses ajax to get the gifs with the corresponding asssigned criteria 	
+		
 		$.ajax({
 			url: baseUrl,
 			method: "GET",
@@ -63,7 +69,7 @@ $(document).on("ready",function(){
 			console.log(err);
 		});				
 	});
-
+//on click function that enables the gif to go from still to play and vice-versa
 	$("#result").on("click", "figure img", function(ev){
 		ev.preventDefault();
 		var state = $(this).attr("data-status");
