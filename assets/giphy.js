@@ -1,8 +1,6 @@
 $(document).on("ready",function(){
 	var topics = [{topic:"NFL",limit:"10",rating:"all"},
 				{topic:"NBA",limit:"10",rating:"all"},
-				{topic:"Warner Bros",limit:"10",rating:"all"},
-				{topic:"DC",limit:"10",rating:"all"},
 				{topic:"Football",limit:"10",rating:"all"}];
 	topics.forEach(function(t){
 		var div = $("<div class='topics'><p><span>Limit:</span> "+t.limit+"</p><p><span>Rating:</span> "+t.rating+"</p><button class='btn' data-topic='"+t.topic+"' data-limit='"+t.limit+"' data-rating='"+t.rating+"'>"+t.topic+"</button></div>");
@@ -40,7 +38,7 @@ $(document).on("ready",function(){
 		giphyData[parameterApiKey] = apiKey;
 		giphyData[parameterTopic] = topic;
 		giphyData[parameterLimit] = limit;
-		//if "all" is the selected rating then do not add it to the parameter
+		
 		if( rating !== "all")
 			giphyData[parameterRating] = rating;
 
