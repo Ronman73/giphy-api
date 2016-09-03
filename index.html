@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>giphy-api</title>
+		<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+		<link rel="stylesheet" href="assets/style.css">
+		<script src="assets/giphy.js"></script>
+
+
+	</head>
+	<body>
+		<section class="container-fluid">
+			<div class="row">
+				<div id="divTopic" class="col-xs-12">
+				</div>
+			</div>
+			<div class="row">
+				<form action="#" class="col-xs-12">
+					<div class="row">
+						<div id="inputs" class="col-xs-12">
+							<label for="">Topic:</label>
+							<input type="text" id="topic">
+							<label for="">Rating:</label><select id="rating">
+								<option value="all">All</option>
+								<option value="y">Y</option>
+								<option value="g">G</option>
+								<option value="PG">PG</option>
+								<option value="pg-13">PG-13</option>
+								<option value="r">R</option>
+								</select>
+								<label for="">Limit:</label><select id="limit">
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+									<option value="5">5</option>
+									<option value="6">6</option>
+									<option value="7">7</option>
+									<option value="8">8</option>
+									<option value="9">9</option>
+									<option selected="selected value="10">10</option>
+								</select>
+							
+							</select>
+							<div class="row">
+								<div class="col-xs-4 col-xs-offset-4 formBtn">
+									<input id="add" class="btn btn-primary" type="submit" value="add">
+									<input class="btn btn-danger" type="reset" value="Clear">
+								</div>
+							</div>
+						</div>
+						
+					</div>
+					
+				</form>
+			</div>
+			<div class="row"><div id="result" class="col-xs-12"></div></div>
+		</section>
+	</body>
+</html>
